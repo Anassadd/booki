@@ -1,0 +1,441 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+/****** Header ***********/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+.logo img {
+    width: 50px; /* Définit la largeur */
+    object-fit: cover;
+    padding: 30px 0;
+}
+
+nav ul li a {
+    padding: 10px;
+}
+
+nav ul li {
+    padding-top: 15px;
+}
+
+nav ul li a:hover {
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color); /* Change la couleur au survol */
+}
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    display: flex; /* Affiche les éléments en ligne */
+    gap: 40px; /* Ajoute de l'espace entre les éléments */
+    margin: 0; /*Supprime les marges externes*/
+    padding: 0; /*Supprime les espaces internes*/
+}
+
+nav ul li a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: #333;
+    transition: color 0.3s ease; /* Effet au survol */
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 1%;
+}
+
+p {
+    margin-bottom: 1%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*barre de rechrche*/
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin: 30px 0px;
+    overflow: hidden;
+    width: fit-content; /* s'adapte au contenu */
+    height: 49px;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+
+}
+
+.search-form label {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-right: 1px solid #F2F2F2;
+}
+
+.search-form label i {
+    font-size: 18px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form input {
+    height: 100%;
+    font-size: 20px;
+    padding-left: 10px;
+    border: none;
+    width: 180px;
+    outline: none;
+}
+
+.search-form i {
+    width: 50px;
+    height: 49px;
+    flex-shrink: 0;
+}
+
+
+/* Bouton de recherche */
+
+.search-form button {
+    height: 100%;
+    width: 132px;
+    background-color: #0065FC;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+/* filtres*/
+.filters-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.filters-container h2 {
+    font-size: 18px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px; /* Espacement entre les boutons */
+}
+  
+.filter {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    gap: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+.filter:hover {
+    background-color: var(--filter-bg-color); /* Effet au survol */
+}
+  
+.filter i{
+    width: 20px; /* Taille de l'icône */
+    height: 20px;
+}
+
+.info-bar {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 5px; /* Espace entre les éléments */
+    font-size: 16px;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+                         /****** Hebergements ***********/
+
+/* Conteneur principal */
+.hebergements {
+    width: 65%;
+}
+
+.hebergements h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet au survol */
+}
+
+.afficherplus {
+    margin-top: 20px;
+    font-weight: bold; /* Rend le texte gras */
+    font-size: 15px;
+}
+
+/* Image de la carte */
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+} 
+
+.card img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 20px; /* Arrondi en haut à gauche */
+    border-top-right-radius: 20px; /* Arrondi en haut à droite */
+}
+.populaires-cards .card img {
+    border-top-right-radius: 0px; /* Arrondi en haut à droite */
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 10px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+/* Couleur bleue pour les étoiles */
+.blue-star {
+    color: #0065FC; /* Bleu */
+    font-size: 16px; /* Ajuste la taille des étoiles */
+    margin-right: 2px; /* Espacement entre les étoiles */
+}
+
+
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/* Activités à Marseille */
+
+.activites-container {
+    display: flex;  /* Utilise Flexbox pour aligner les éléments */
+    gap: 30px;  /* Ajoute un léger espace entre les images */
+}
+
+.activite-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activite-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activite-img figcaption {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin-top: 90px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0px -10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+}
