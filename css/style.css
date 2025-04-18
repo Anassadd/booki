@@ -348,30 +348,31 @@ a {
 }
 
 /* Activités à Marseille */
-
 .activites-container {
-    display: flex;  /* Utilise Flexbox pour aligner les éléments */
-    gap: 30px;  /* Ajoute un léger espace entre les images */
+    display: flex;  
 }
 
 .activite-img img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    width: 100%; /* L’image prend toute la largeur de sa carte */
+    height: 350px; /* Hauteur fixe de l’image */
+    object-fit: cover; 
 }
 
-.activite-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.activite-img {
+    width: 265px; /* Largeur fixe de chaque carte */
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px #0000001A; /* Ombre douce sous la carte */
+    overflow: hidden; /* Cache tout débordement (utile avec border-radius et les images) */
 }
 
-.activite-img figcaption {
-    padding: 15px;
-    font-weight: 600;
-    font-size: 1.1rem;
+.activite-img figure {
+    margin: 0px; 
+}
+
+.activite-img p {
+    padding: 8px;
+    font-weight: 600; 
+    font-size: 1.1rem; /* Agrandit un peu la taille du texte */
 }
 
 /*footer*/
@@ -400,15 +401,32 @@ a {
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
+/*mode tablette*/
+
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergements-and-populaires {
+    
+
+    .filters-container {
         flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .hebergements {
         width: 100%;
+    }
+
+    .hebergements-cards .card-title {
+        font-size: 13px;
     }
 
     .populaires {
@@ -420,10 +438,11 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 33%;
     }
 
     .populaires-cards .card-title {
@@ -431,8 +450,27 @@ a {
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 12px;
     }
+
+    .activite-img img {
+        height: 200px;
+    }
+
+    .activite-img figcaption {
+        padding: 10px 5px 10px 10px;
+    }
+    
+    footer {
+        flex-direction: column; /* les blocs se mettent les uns sous les autres */
+        align-items: flex-start; /* aligne à gauche (ou center si tu veux centrer) */
+        gap: 30px;
+    }
+
+    footer div {
+        width: 100%; /* chaque colonne prend toute la largeur */
+    }
+    
 }
 
 /* Small devices (phones, less than 768px) */
